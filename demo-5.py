@@ -14,8 +14,10 @@ def auto_accept_friends(msg):
             @bot.register(f)
             def print_reply(msg):
                 print(msg.text)
-                if msg.text == '#':
-                    return auto_reaponse(msg)
+                if msg.text == '2':
+                    g = bot.groups().search('c1')[0]
+                    if f not in g:
+                        g.add_members(f,'nihao')
                 else:
                     return msg.text
         if msg.text == '2':
